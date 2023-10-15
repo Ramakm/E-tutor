@@ -8,6 +8,9 @@ const Category = dynamic(() => import("@/components/Category/Category"), {
 const Courses = dynamic(() => import("@/components/Courses/Courses"), {
   ssr: false,
 });
+const Instructor = dynamic(() => import("@/components/Instructor/Instructor"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -16,6 +19,7 @@ export default function Home() {
         <Hero />
         <Category />
         <Courses />
+        <Instructor />
       </div>
     </>
   );
