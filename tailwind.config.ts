@@ -25,11 +25,19 @@ const config: Config = {
         neutral:"#fff"
       },
       textColor:{
-         primary:"#FF6636",
+        primary:"#FF6636",
+        "primary-50":"#FFEEE8",
         secondary:"#FFEEE8",
         "secondary-100":"#1D2026",
+        "secondary-75":"#EBEBFF",
         "secondary-50":"#EBEBFF",
+        "secondary-30":"#342F98",
         success:"#E1F7E3",
+        "success-100":"#15711F",
+        warning:"#65390C",
+        error:"#882929",
+        Gray:"#FFFFFF",
+        "Gray-50":"#F5F7FA",
         accent:"#F5F7FA",
         neutral:"#fff"
       },

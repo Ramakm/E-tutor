@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
-const inter = Montserrat({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 const Layout = dynamic(() => import("@/components/Layouts/Layout"), {
   ssr: false,
 });

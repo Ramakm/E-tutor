@@ -17,13 +17,13 @@ import icon_12 from "../../../public/assets/images/Frame_12.png";
 const Category = () => {
   return (
     <>
-      <div className="lg:px-40 md:px-28 sm:px-20 px-10 lg:py-10 py-7">
-        <Typography.Title level={3} className="font-semibold text-center mb-10">
+      <div className="lg:px-28 md:px-12 sm:px-8 px-4 lg:py-10 py-7">
+        <Typography.Title level={2} className="font-semibold text-center mb-7">
           Browse top category
         </Typography.Title>
         <Row className="items-center">
           {[...Array(12)]?.map((_, index) => (
-            <Col key={index} xs={24} sm={24} md={12} lg={12} xl={6}>
+            <Col key={index} xs={24} sm={24} md={12} lg={6} xl={6}>
               <div
                 className={`hover:shadow-lg duration-500 ease-in-out ${
                   index === 0
@@ -49,7 +49,7 @@ const Category = () => {
                     : index === 10
                     ? "bg-success"
                     : "bg-warning"
-                } px-3 py-2 m-3`}
+                } px-3 py-2 lg:m-3 md:mx-3 my-3`}
               >
                 <div className="flex items-center gap-3">
                   <Image
