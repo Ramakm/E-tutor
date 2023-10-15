@@ -1,20 +1,24 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Typography } from "antd";
+import { RiGraduationCapFill } from "react-icons/ri";
+import { MdFavoriteBorder } from "react-icons/md";
+import { BsCart2 } from "react-icons/bs";
+import { IoMdNotificationsOutline } from "react-icons/io";
+const { Title } = Typography;
+import { Select, Button, Space } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
+import { Input } from "antd";
 
-const links = [
-  { name: "home", link: "/" },
-  { name: "about", link: "#about" },
-  { name: "service", link: "#service" },
-  { name: "skills", link: "#skill" },
-  { name: "projects", link: "#project" },
-  { name: "resume", link: "#resume" },
-  { name: "contact", link: "#contact" },
+const browserData = [
+  { label: "Browser", value: 1 },
+  { label: "Browser One", value: 2 },
+  { label: "Browser Two", value: 3 },
 ];
 
 const Header = () => {
-  const [expandedMenu, setExpandedMenu] = React.useState(false);
+  const [selectType, setSelectType] = React.useState(browserData[0]);
   const [activeNav, setActiveNav] = React.useState<string>("");
 
   React.useEffect(() => {
@@ -28,9 +32,9 @@ const Header = () => {
   const stickNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 200
+      windowHeight > 50
         ? setActiveNav(
-            "fixed top-0 left-0 w-full bg-[#222222] bg-opacity-80 lg:shadow-2xl z-30 transform transition-transform duration-700 ease-in-out"
+            "fixed top-0 left-0 w-full shadow-lg z-30 transform transition-transform duration-700 ease-in-out"
           )
         : setActiveNav("");
     }
@@ -43,56 +47,64 @@ const Header = () => {
           event.preventDefault();
         }}
       >
-        <div className={`${activeNav} text-neutral py-6 lg:px-28 md:px-12 sm:px-8 px-4 bg-secondary-50`}
+        <div
+          className={`${activeNav} py-4 lg:px-14 md:px-6 sm:px-5 px-2 bg-neutral`}
         >
           <div className="flex justify-between items-center">
-            <Link href={"/"}>
-              <h1 className={`uppercase text-xl font-bold text-primary`}>
-                Mohammad Awlad
-              </h1>
-            </Link>
-            <div className="lg:block hidden">
-              <ul className="flex items-center gap-6 uppercase">
-                {links.map((link) => (
-                  <li
-                    key={link.name}
-                    className={`${
-                      activeNav ? "" : "hover:text-primary"
-                    } duration-300 ease-in-out`}
-                  >
-                    <Link href={link.link}>{link.name}</Link>
-                  </li>
-                ))}
-              </ul>
+            {/*--- Left Info ---*/}
+            <div className="flex items-center gap-10">
+              <Link href={"/"} className="flex items-center gap-3">
+                <RiGraduationCapFill className="inline w-7 h-7 text-primary" />
+                <Title level={3}>E-tutor</Title>
+              </Link>
+              {/*--- Search field ---*/}
+              <div className="lg:block hidden">
+                <div className="flex items-center gap-3">
+                  <Select
+                    style={{ width: 300, border: 0, borderRadius: 0 }}
+                    className={
+                      "border border-gray-200 focus:outline-none focus:border-primary rounded-none"
+                    }
+                    value={selectType}
+                    onChange={(e: any) => setSelectType(e.target?.value)}
+                    options={browserData.map((city) => ({
+                      label: city?.label,
+                      value: city?.value,
+                    }))}
+                  />
+                  <Input
+                    placeholder="What do you want to learn.."
+                    className={
+                      "border border-gray-200 focus:outline-none focus:border-primary rounded-none"
+                    }
+                    prefix={<SearchOutlined className="text-gray-500" />}
+                  />
+                </div>
+              </div>
             </div>
-            {/*---- Menu Icon ---*/}
-            <AiOutlineMenu
-              onClick={() => setExpandedMenu(true)}
-              className="text-xl lg:hidden block cursor-pointer"
-            />
+            {/*---- Right Info ---*/}
+            <div className="flex items-center gap-4">
+              <IoMdNotificationsOutline className="inline w-6 h-6 text-gray-500 cursor-pointer" />
+              <MdFavoriteBorder className="inline w-5 h-5 text-gray-500 cursor-pointer" />
+              <BsCart2 className="inline w-5 h-5 text-gray-500 cursor-pointer" />
+              <Space wrap>
+                <Button
+                  style={{
+                    backgroundColor: "transparent",
+                    borderRadius: 0,
+                  }}
+                  className={"bg-secondary text-primary border-none"}
+                >
+                  Create account
+                </Button>
+                <Button
+                  className={"bg-primary text-neutral border-none rounded-none"}
+                >
+                  Sign In
+                </Button>
+              </Space>
+            </div>
           </div>
-        </div>
-        {/*---- Mobile Menu ----*/}
-        <div
-          className={`${
-            expandedMenu ? "translate-y-0" : "-translate-y-full"
-          } bg-primary text-neutral lg:hidden md:px-12 sm:px-8 px-4 py-3 transition-transform duration-500 ease-in-out transform fixed top-0 left-0 w-full z-40 flex justify-between`}
-        >
-          <ul className="uppercase">
-            {links.map((link) => (
-              <li
-                key={link.name}
-                className="my-4"
-                onClick={() => setExpandedMenu(false)}
-              >
-                <Link href={link.link}>{link.name}</Link>
-              </li>
-            ))}
-          </ul>
-          <AiOutlineClose
-            onClick={() => setExpandedMenu(false)}
-            className="text-xl mt-3 cursor-pointer"
-          />
         </div>
       </div>
     </>
