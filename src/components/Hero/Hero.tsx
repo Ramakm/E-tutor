@@ -6,7 +6,7 @@ import bannerImg from "../../../public/assets/images/softic_banner_image.png";
 const Hero = () => {
   return (
     <>
-      <div className="container lg:px-40 md:px-28 sm:px-20 px-10 lg:py-10 py-7">
+      <div className="lg:px-40 md:px-28 sm:px-20 px-10 lg:py-10 py-7 bg-accent">
         <Row gutter={20} className="items-center">
           <Col
             xs={24}

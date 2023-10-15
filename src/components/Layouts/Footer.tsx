@@ -12,7 +12,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <div className="bg-secondary-50 text-neutral lg:pt-16 pb-4 md:pt-10 pt-6 md:space-y-14 space-y-10">
+      <div className="bg-secondary-100 text-neutral lg:pt-16 pb-4 md:pt-10 pt-6 md:space-y-14 space-y-10">
         <div className="lg:px-28 md:px-12 sm:px-8 px-4">
           <Row gutter={30}>
             {/* Start Learning */}

@@ -27,7 +27,7 @@ const TopBar = () => {
 
   return (
     <>
-      <div className="bg-secondary-50 text-gray-500 py-3 lg:px-14 md:px-6 sm:px-5 px-2 ">
+      <div className="bg-secondary-100 text-gray-500 py-3 lg:px-14 md:px-6 sm:px-5 px-2 ">
         <div className="flex justify-between items-center gap-3">
           {/*--- Left Header Item ---*/}
           <div>
@@ -81,7 +81,7 @@ const TopBar = () => {
                 <Input
                   placeholder="What do you want to learn.."
                   className={
-                    "border border-gray-600 focus:outline-none focus:border-primary rounded-none bg-secondary-50"
+                    "border border-gray-600 focus:outline-none focus:border-primary rounded-none bg-secondary-100"
                   }
                   prefix={<SearchOutlined className="text-gray-500" />}
                 />

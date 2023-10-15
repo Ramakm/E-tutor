@@ -11,22 +11,32 @@ const config: Config = {
     extend: {
       backgroundColor:{
         primary:"#FF6636",
+        "primary-50":"#FFEEE8",
         secondary:"#FFEEE8",
-        "secondary-50":"#1D2026",
+        "secondary-100":"#1D2026",
+        "secondary-75":"#EBEBFF",
+        "secondary-50":"#EBEBFF",
+        success:"#E1F7E3",
+        warning:"#FFF2E5",
+        error:"#FFF0F0",
+        Gray:"#FFFFFF",
+        "Gray-50":"#F5F7FA",
         accent:"#F5F7FA",
         neutral:"#fff"
       },
       textColor:{
          primary:"#FF6636",
         secondary:"#FFEEE8",
-        "secondary-50":"#1D2026",
+        "secondary-100":"#1D2026",
+        "secondary-50":"#EBEBFF",
+        success:"#E1F7E3",
         accent:"#F5F7FA",
         neutral:"#fff"
       },
       borderColor:{
          primary:"#FF6636",
         secondary:"#FFEEE8",
-        "secondary-50":"#1D2026",
+        "secondary-100":"#1D2026",
         accent:"#F5F7FA",
         neutral:"#fff"
       },
