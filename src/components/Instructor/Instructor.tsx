@@ -7,7 +7,7 @@ import Image from "next/image";
 const Instructor = () => {
   return (
     <>
-      <div className="lg:px-28 md:px-12 sm:px-8 px-4 lg:py-10 pb-16 py-7 bg-accent">
+      <div className="lg:px-28 md:px-12 sm:px-8 px-4 lg:pt-10 lg:pb-40 md:pt-10 md:pb-44 py-7 bg-accent">
         <div className="lg:mx-10 md:mx-6">
           <Row className="items-center">
             <Col xs={24} sm={24} md={24} lg={12} xl={12}>

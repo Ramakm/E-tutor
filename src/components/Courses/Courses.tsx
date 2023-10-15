@@ -79,7 +79,7 @@ const Courses = () => {
                   </div>
                   <div>
                     <Typography.Text className="text-gray-700 text-sm">
-                      ${course?.student}{" "}
+                      {course?.student}{" "}
                       <span className="text-gray-500">students</span>
                     </Typography.Text>
                   </div>
