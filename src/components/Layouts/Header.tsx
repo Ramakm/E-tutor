@@ -2,12 +2,11 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Typography } from "antd";
 import { RiGraduationCapFill } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
 import { BsCart2 } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { Select, Button, Space } from "antd";
+import { Select, Button, Space ,Typography} from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 const TopBar = dynamic(() => import("@/components/Layouts/Topbar"), {
