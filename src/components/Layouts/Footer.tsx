@@ -1,8 +1,8 @@
 "use client";
-import { Col, Divider, Row, Typography, Button, Space } from "antd";
+import { Col, Divider, Row, Typography, Button, Space, Select } from "antd";
 import Link from "next/link";
 import { RiGraduationCapFill } from "react-icons/ri";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsArrowRight } from "react-icons/bs";
 import { BiLogoFacebook, BiLogoLinkedin, BiLogoTwitter } from "react-icons/bi";
 import { AiFillYoutube } from "react-icons/ai";
 import appleImg from "../../../public/assets/images/apple_app.png";
@@ -12,14 +12,11 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <div className="bg-secondary-50 text-neutral lg:py-12 md:py-8 py-6">
+      <div className="bg-secondary-50 text-neutral lg:pt-16 pb-4 md:pt-10 pt-6 md:space-y-14 space-y-10">
         <div className="lg:px-28 md:px-12 sm:px-8 px-4">
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            className="items-center"
-          >
+          <Row gutter={30}>
             {/* Start Learning */}
-            <Col className="gutter-row" xs={24} sm={24} md={12} lg={10} xl={10}>
+            <Col xs={24} sm={24} md={24} lg={10} xl={10}>
               <div>
                 <Typography.Title
                   level={2}
@@ -46,7 +43,7 @@ const Footer = () => {
               </div>
             </Col>
             {/*--- Online Course ---*/}
-            <Col className="gutter-row" xs={12} sm={12} md={6} lg={5} xl={5}>
+            <Col xs={11} sm={11} md={8} lg={4} xl={4}>
               <div className="">
                 <Typography.Title level={2} className="text-neutral">
                   6.3k
@@ -57,7 +54,7 @@ const Footer = () => {
               </div>
             </Col>
             {/*--- Instructor ---*/}
-            <Col className="gutter-row" xs={12} sm={12} md={6} lg={5} xl={5}>
+            <Col xs={11} sm={11} md={8} lg={4} xl={4}>
               <div className="">
                 <Typography.Title level={2} className="text-neutral">
                   26k
@@ -68,7 +65,7 @@ const Footer = () => {
               </div>
             </Col>
             {/*--- Success ---*/}
-            <Col className="gutter-row" xs={12} sm={12} md={12} lg={4} xl={4}>
+            <Col xs={24} sm={24} md={8} lg={4} xl={4}>
               <div className="">
                 <Typography.Title level={2} className="text-neutral">
                   99.9%
@@ -122,7 +119,7 @@ const Footer = () => {
                       <Link
                         key={index}
                         href={""}
-                        className="block text-gray-500 text-sm my-2"
+                        className="block text-gray-500 hover:text-neutral duration-200 hover:text-neutral duration-200 ease-in-out text-sm my-2"
                       >
                         {index === 0
                           ? "Development"
@@ -149,7 +146,9 @@ const Footer = () => {
                       <Link
                         key={index}
                         href={""}
-                        className="block text-gray-500 text-sm my-2"
+                        className={`block text-gray-500 hover:text-neutral duration-200 ease-in-out text-sm my-2 flex items-center gap-1 ${
+                          index === 1 && "w-36 border-b border-primary"
+                        }`}
                       >
                         {index === 0
                           ? "About"
@@ -158,6 +157,7 @@ const Footer = () => {
                           : index === 2
                           ? "Contact"
                           : "Career"}
+                        {index === 1 && <BsArrowRight />}
                       </Link>
                     ))}
                   </li>
@@ -176,7 +176,7 @@ const Footer = () => {
                       <Link
                         key={index}
                         href={""}
-                        className="block text-gray-500 text-sm my-2"
+                        className="block text-gray-500 hover:text-neutral duration-200 text-sm my-2"
                       >
                         {index === 0
                           ? "Help Center"
@@ -194,7 +194,10 @@ const Footer = () => {
             {/*--- App ---*/}
             <Col className="gutter-row" xs={12} sm={12} md={8} lg={6} xl={6}>
               <div>
-                <Typography.Title level={5} className="text-neutral uppercase pb-3">
+                <Typography.Title
+                  level={5}
+                  className="text-neutral uppercase pb-3"
+                >
                   download our app
                 </Typography.Title>
                 <Link href={""}>
@@ -222,12 +225,23 @@ const Footer = () => {
           </Row>
         </div>
         <Divider className="bg-gray-700" />
-        <p>
-          copyright &copy; all rights reserved by{" "}
-          <span className="text-primary font-bold">
-            mohammad awlad <span>-</span> 2023
-          </span>
-        </p>
+        <div className="flex justify-between items-center flex-wrap gap-3 lg:px-28 md:px-12 sm:px-8 px-4">
+          <p className="text-gray-500 hover:text-neutral duration-200 text-xs">
+            &copy;2011 - Eduflex. Designed by{" "}
+            <span className="text-gray-300 font-bold">TemplateCookie</span> All
+            rights reserved
+          </p>
+          <Select
+            defaultValue="EN"
+            style={{ width: 200, border: "1px solid #ccc" }}
+            bordered={false}
+            options={[
+              { value: "EN", label: "English" },
+              { value: "bangla", label: "Bangla" },
+              { value: "hindi", label: "Hindi" },
+            ]}
+          />
+        </div>
       </div>
     </>
   );
