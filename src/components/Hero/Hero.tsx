@@ -25,7 +25,7 @@ const Hero = () => {
               </Typography.Title>
               <Typography.Title
                 level={5}
-                className="text-gray-500 text-base text-justify"
+                className="text-gray-500 w-96 text-base text-justify"
               >
                 Our mision is to help people to find the best course online and
                 learn with expert anytime, anywhere.
