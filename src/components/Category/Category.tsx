@@ -23,6 +23,7 @@ const Category = () => {
         <Typography.Title level={2} className="font-semibold text-center mb-7">
           Browse top category
         </Typography.Title>
+        {/*--- Card Info ----*/}
         <Row className="items-center">
           {[...Array(12)]?.map((_, index) => (
             <Col key={index} xs={24} sm={24} md={12} lg={6} xl={6}>
@@ -123,6 +124,7 @@ const Category = () => {
             </Col>
           ))}
         </Row>
+        {/*--- Button ----*/}
         <div className="flex justify-center items-center gap-2 mt-3">
           <div>
             <Typography.Title level={2} className="text-sm text-gray-500">

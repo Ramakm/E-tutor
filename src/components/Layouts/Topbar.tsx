@@ -28,13 +28,13 @@ const TopBar = () => {
 
   return (
     <>
-      <div className="bg-secondary-100 text-gray-500 py-3 lg:px-14 md:px-6 sm:px-5 px-2 ">
+      <div className="bg-secondary-100 text-gray-500 py-3 lg:px-14 md:px-6 sm:px-5 px-2">
         <div className="flex justify-between items-center gap-3">
           {/*--- Mobile Menu ----*/}
           <div>
             <AiOutlineMenu
               onClick={() => setOpen(true)}
-              className="text-xl lg:hidden block cursor-pointer"
+              className="text-xl lg:hidden block cursor-pointer text-primary"
             />
             <Drawer
               style={{ backgroundColor: "#1D2026" }}

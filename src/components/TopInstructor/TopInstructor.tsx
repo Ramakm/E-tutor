@@ -8,9 +8,13 @@ const TopInstructor = () => {
   return (
     <>
       <div className="bg-neutral px-5 py-3 lg:mx-28 md:mx-12 sm:mx-8 mx-4 lg:-mt-20 md:-mt-36 mb-20 border border-gray-100 shadow-md">
-        <Typography.Title level={3} className="font-semibold text-center mt-10 mb-5">
+        <Typography.Title
+          level={3}
+          className="font-semibold text-center mt-10 mb-5"
+        >
           Top instructor of the month
         </Typography.Title>
+        {/*--- Card Info ---*/}
         <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-6">
           {TopInstructorData?.map((top, index) => (
             <div key={index} className="border border-gray-100">

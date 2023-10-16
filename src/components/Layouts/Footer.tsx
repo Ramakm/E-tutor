@@ -13,6 +13,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-secondary-100 text-neutral lg:pt-16 pb-4 md:pt-10 pt-6 md:space-y-14 space-y-10">
+        {/*--- Student Section ---*/}
         <div className="lg:px-28 md:px-12 sm:px-8 px-4">
           <Row gutter={30}>
             {/* Start Learning */}
@@ -78,6 +79,7 @@ const Footer = () => {
           </Row>
         </div>
         <Divider className="bg-gray-700" />
+        {/*--- Company Info ---*/}
         <div className="lg:px-28 md:px-12 sm:px-8 px-4">
           <Row
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
@@ -196,7 +198,7 @@ const Footer = () => {
               <div className="lg:ml-4 md:ml-4 md:my-4 lg:my-0 my-4">
                 <Typography.Title
                   level={5}
-                  className="text-neutral uppercase pb-3"
+                  className="text-neutral uppercase pb-1"
                 >
                   download our app
                 </Typography.Title>
@@ -225,8 +227,9 @@ const Footer = () => {
           </Row>
         </div>
         <Divider className="bg-gray-700" />
+        {/*--- Copy right section ---*/}
         <div className="flex justify-between items-center flex-wrap gap-3 lg:px-28 md:px-12 sm:px-8 px-4">
-          <p className="text-gray-500 hover:text-neutral duration-200 text-xs">
+          <p className="text-gray-500 text-xs">
             &copy;2011 - Eduflex. Designed by{" "}
             <span className="text-gray-300 font-bold">TemplateCookie</span> All
             rights reserved

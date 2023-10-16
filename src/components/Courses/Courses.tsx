@@ -11,6 +11,7 @@ const Courses = () => {
         <Typography.Title level={2} className="font-semibold text-center mb-7">
           Best selling courses
         </Typography.Title>
+        {/*---- Card Section ----*/}
         <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-6">
           {CourseData?.map((course, index) => (
             <div key={index} className="h-[333px] shadow-lg">
@@ -23,6 +24,7 @@ const Courses = () => {
                 className="w-full h-[183px] object-cover"
               />
               <div className="py-3 space-y-2">
+                {/*--- Card body ---*/}
                 <div className="px-3">
                   <div className="flex justify-between items-center">
                     <div>
@@ -68,6 +70,7 @@ const Courses = () => {
                   </Typography.Text>
                 </div>
                 <Divider className="bg-gray-200 -mt-1" />
+                {/*--- Card Footer ---*/}
                 <div className="px-3">
                   <div className="flex justify-between items-center">
                     <div className="flex items-center gap-1">

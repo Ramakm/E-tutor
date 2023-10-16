@@ -8,6 +8,7 @@ const Hero = () => {
     <>
       <div className="lg:px-28 md:px-12 sm:px-8 px-4 lg:py-10 py-7 bg-accent">
         <Row gutter={20} className="items-center">
+          {/*--- Left Info ----*/}
           <Col
             xs={24}
             sm={24}
@@ -25,18 +26,21 @@ const Hero = () => {
               </Typography.Title>
               <Typography.Title
                 level={5}
-                className="text-gray-500 w-96 text-base text-justify"
+                className="text-gray-500 lg:w-96 md:w-60 text-base text-justify"
               >
                 Our mision is to help people to find the best course online and
                 learn with expert anytime, anywhere.
               </Typography.Title>
               <Button
-                className={"bg-primary text-neutral border-none rounded-none"}
+                className={
+                  "bg-primary h-10 w-36 text-neutral border-none rounded-none"
+                }
               >
                 Create Account
               </Button>
             </div>
           </Col>
+          {/*--- Right Info ----*/}
           <Col
             xs={24}
             sm={24}

@@ -256,13 +256,13 @@ const RecentCourse = () => {
           ))}
         </div>
         {/*--- Button ----*/}
-        <div className="mt-4 flex justify-center">
+        <div className="mt-8 flex justify-center">
           <Button
             className={
-              "flex items-center gap-3 bg-secondary text-primary border-none rounded-none"
+              "w-56 h-12 flex justify-between items-center gap-3 bg-secondary text-primary border-none rounded-none text-sm font-semibold"
             }
           >
-            Browser All Courses <BsArrowRight />
+            Browser All Courses <BsArrowRight className="text-lg" />
           </Button>
         </div>
       </div>
