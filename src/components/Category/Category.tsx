@@ -125,7 +125,7 @@ const Category = () => {
           ))}
         </Row>
         {/*--- Button ----*/}
-        <div className="flex justify-center items-center gap-2 mt-3">
+        <div className="flex justify-center flex-wrap items-center gap-2 mt-3">
           <div>
             <Typography.Title level={2} className="text-sm text-gray-500">
               We have more category & subcategory.

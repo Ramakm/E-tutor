@@ -26,20 +26,24 @@ const Footer = () => {
                   Start learning with 67.1k students around the world.
                 </Typography.Title>
                 <Space className="mt-5">
-                  <Button
-                    className={
-                      "bg-primary lg:w-40 md:w-40 text-neutral border-none rounded-none"
-                    }
-                  >
-                    Join the Family
-                  </Button>
-                  <Button
-                    className={
-                      "bg-gray-700 lg:w-40 md:w-40 text-neutral border-none rounded-none"
-                    }
-                  >
-                    Browser All Courses
-                  </Button>
+                  <Link href={""}>
+                    <Button
+                      className={
+                        "bg-primary lg:w-40 md:w-40 text-neutral border-none rounded-none"
+                      }
+                    >
+                      Join the Family
+                    </Button>
+                  </Link>
+                  <Link href={""}>
+                    <Button
+                      className={
+                        "bg-gray-700 lg:w-40 md:w-40 text-neutral border-none rounded-none"
+                      }
+                    >
+                      Browser All Courses
+                    </Button>
+                  </Link>
                 </Space>
               </div>
             </Col>

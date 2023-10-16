@@ -8,6 +8,7 @@ import { FiBarChart } from "react-icons/fi";
 import { BsArrowRight, BsCart2 } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
 import UserImg from "../../../public/assets/images/Photo.png";
+import Link from "next/link";
 
 const RecentCourse = () => {
   return (
@@ -21,81 +22,83 @@ const RecentCourse = () => {
           {CourseData?.slice(0, 4)?.map((course, index) => (
             <div key={index} className="group">
               {/*--- Recent Course ----*/}
-              <div className="lg:group-hover:hidden block h-[333px] border border-gray-100 z-0">
-                <Image
-                  src={course?.img}
-                  alt="Icon"
-                  width={"0"}
-                  height={"0"}
-                  priority
-                  className="w-full h-[183px] object-cover"
-                />
-                <div className="py-3 space-y-2">
-                  <div className="px-3">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <Typography.Text
-                          className={`${
-                            index === 0
-                              ? "bg-secondary text-primary"
-                              : index === 1
-                              ? "bg-secondary-75 text-blue-500"
-                              : index === 2
-                              ? "bg-success text-success-100"
-                              : index === 3
-                              ? "bg-secondary-75 text-secondary-30"
-                              : index === 4
-                              ? "bg-error text-error"
-                              : index === 5
-                              ? "bg-warning text-warning"
-                              : index === 6
-                              ? "bg-secondary-75 text-secondary-30"
-                              : index === 7
-                              ? "bg-success text-success-100"
-                              : index === 8
-                              ? "bg-secondary text-primary"
-                              : "bg-warning text-warning"
-                          } text-xs uppercase px-2 py-0.5`}
-                        >
-                          {course?.title}
-                        </Typography.Text>
-                      </div>
-                      <div>
-                        <Typography.Text className="text-primary text-sm font-bold">
-                          ${course?.price}
-                        </Typography.Text>
-                      </div>
-                    </div>
-                    <Typography.Text
-                      style={{ margin: 0 }}
-                      className="text-sm my-3 text-gray-900 block font-semibold"
-                    >
-                      {course?.des?.substring(0, 40) === course?.des
-                        ? course?.des?.substring(0, 40)
-                        : course?.des?.substring(0, 40) + "..."}
-                    </Typography.Text>
-                  </div>
-                  <Divider className="bg-gray-200 -mt-1" />
-                  <div className="px-3">
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-1">
-                        <AiFillStar className="text-primary text-lg" />
+              <Link href={""}>
+                <div className="lg:group-hover:hidden block h-[333px] border border-gray-100 z-0">
+                  <Image
+                    src={course?.img}
+                    alt="Icon"
+                    width={"0"}
+                    height={"0"}
+                    priority
+                    className="w-full h-[183px] object-cover"
+                  />
+                  <div className="py-3 space-y-2">
+                    <div className="px-3">
+                      <div className="flex justify-between items-center">
                         <div>
-                          <Typography.Text className={`text-sm`}>
-                            {`${course?.rating}.0`}
+                          <Typography.Text
+                            className={`${
+                              index === 0
+                                ? "bg-secondary text-primary"
+                                : index === 1
+                                ? "bg-secondary-75 text-blue-500"
+                                : index === 2
+                                ? "bg-success text-success-100"
+                                : index === 3
+                                ? "bg-secondary-75 text-secondary-30"
+                                : index === 4
+                                ? "bg-error text-error"
+                                : index === 5
+                                ? "bg-warning text-warning"
+                                : index === 6
+                                ? "bg-secondary-75 text-secondary-30"
+                                : index === 7
+                                ? "bg-success text-success-100"
+                                : index === 8
+                                ? "bg-secondary text-primary"
+                                : "bg-warning text-warning"
+                            } text-xs uppercase px-2 py-0.5`}
+                          >
+                            {course?.title}
+                          </Typography.Text>
+                        </div>
+                        <div>
+                          <Typography.Text className="text-primary text-sm font-bold">
+                            ${course?.price}
                           </Typography.Text>
                         </div>
                       </div>
-                      <div>
-                        <Typography.Text className="text-gray-700 text-sm">
-                          {course?.student}{" "}
-                          <span className="text-gray-500">students</span>
-                        </Typography.Text>
+                      <Typography.Text
+                        style={{ margin: 0 }}
+                        className="text-sm my-3 text-gray-900 block font-semibold"
+                      >
+                        {course?.des?.substring(0, 40) === course?.des
+                          ? course?.des?.substring(0, 40)
+                          : course?.des?.substring(0, 40) + "..."}
+                      </Typography.Text>
+                    </div>
+                    <Divider className="bg-gray-200 -mt-1" />
+                    <div className="px-3">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center gap-1">
+                          <AiFillStar className="text-primary text-lg" />
+                          <div>
+                            <Typography.Text className={`text-sm`}>
+                              {`${course?.rating}.0`}
+                            </Typography.Text>
+                          </div>
+                        </div>
+                        <div>
+                          <Typography.Text className="text-gray-700 text-sm">
+                            {course?.student}{" "}
+                            <span className="text-gray-500">students</span>
+                          </Typography.Text>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
               {/*---- Hover to Course Details ----*/}
               <div
                 className={`lg:w-[424px] lg:h-[600px] absolute lg:-top-14 ${
@@ -257,13 +260,15 @@ const RecentCourse = () => {
         </div>
         {/*--- Button ----*/}
         <div className="mt-8 flex justify-center">
-          <Button
-            className={
-              "w-56 h-12 flex justify-between items-center gap-3 bg-secondary text-primary border-none rounded-none text-sm font-semibold"
-            }
-          >
-            Browser All Courses <BsArrowRight className="text-lg" />
-          </Button>
+          <Link href={""}>
+            <Button
+              className={
+                "w-56 h-12 flex justify-between items-center gap-3 bg-secondary text-primary border-none rounded-none text-sm font-semibold"
+              }
+            >
+              Browser All Courses <BsArrowRight className="text-lg" />
+            </Button>
+          </Link>
         </div>
       </div>
     </>

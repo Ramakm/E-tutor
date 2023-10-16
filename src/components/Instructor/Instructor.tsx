@@ -50,7 +50,7 @@ const Instructor = () => {
             <Col xs={24} sm={24} md={24} lg={12} xl={12}>
               <div>
                 <div className="bg-neutral px-6 py-4 lg:mx-6 lg:my-0 my-6">
-                  <Typography.Text className="text-2xl block">
+                  <Typography.Text className="md:text-2xl text-xl block">
                     Your teaching & earning steps
                   </Typography.Text>
                   <div className="flex justify-between flex-wrap items-center gap-4 my-3">

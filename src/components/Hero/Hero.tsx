@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Typography, Row, Col, Button } from "antd";
 import bannerImg from "../../../public/assets/images/softic_banner_image.png";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
             md={12}
             lg={12}
             xl={12}
-            className="lg:order-1 md:order-1 order-2"
+            className="lg:order-1 md:order-1 order-2 lg:my-0 md:my-0 my-4"
           >
             <div className="md:space-y-6 space-y-3">
               <Typography.Title
@@ -31,13 +32,17 @@ const Hero = () => {
                 Our mision is to help people to find the best course online and
                 learn with expert anytime, anywhere.
               </Typography.Title>
-              <Button
-                className={
-                  "bg-primary h-10 w-36 text-neutral border-none rounded-none"
-                }
-              >
-                Create Account
-              </Button>
+              <div>
+                <Link href={""}>
+                  <Button
+                    className={
+                      "bg-primary h-10 w-36 text-neutral border-none rounded-none"
+                    }
+                  >
+                    Create Account
+                  </Button>
+                </Link>
+              </div>
             </div>
           </Col>
           {/*--- Right Info ----*/}
@@ -47,7 +52,7 @@ const Hero = () => {
             md={12}
             lg={12}
             xl={12}
-            className="lg:order-2 md:order-2 order-1"
+            className="lg:order-2 md:order-2 order-1 lg:my-0 md:my-0 my-4"
           >
             <div>
               <Image
