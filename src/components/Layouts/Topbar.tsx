@@ -118,7 +118,9 @@ const TopBar = () => {
             <Space>
               <Select
                 defaultValue="USD"
-                style={{ width: 80 }}
+                style={{
+                  backgroundColor: "#a7a6a6",
+                }}
                 bordered={false}
                 options={[
                   { value: "USD", label: "USD" },
@@ -128,7 +130,9 @@ const TopBar = () => {
               />
               <Select
                 defaultValue="USD"
-                style={{ width: 80, color: "#fff !important" }}
+                style={{
+                  backgroundColor: "#a7a6a6",
+                }}
                 bordered={false}
                 options={[
                   { value: "USD", label: "USD" },

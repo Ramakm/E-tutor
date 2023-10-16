@@ -240,7 +240,11 @@ const Footer = () => {
           </p>
           <Select
             defaultValue="EN"
-            style={{ width: 200, border: "1px solid #ccc" }}
+            style={{
+              width: 200,
+              border: "1px solid #a7a6a6",
+              backgroundColor: "#a7a6a6",
+            }}
             bordered={false}
             options={[
               { value: "EN", label: "English" },
