@@ -11,6 +11,12 @@ const Courses = dynamic(() => import("@/components/Courses/Courses"), {
 const Instructor = dynamic(() => import("@/components/Instructor/Instructor"), {
   ssr: false,
 });
+const RecentCourse = dynamic(
+  () => import("@/components/RecentCourse/RecentCourse"),
+  {
+    ssr: false,
+  }
+);
 const TopInstructor = dynamic(
   () => import("@/components/TopInstructor/TopInstructor"),
   {
@@ -25,6 +31,7 @@ export default function Home() {
         <Hero />
         <Category />
         <Courses />
+        <RecentCourse />
         <Instructor />
       </div>
       <TopInstructor />

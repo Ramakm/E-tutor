@@ -13,75 +13,77 @@ const Courses = () => {
         </Typography.Title>
         <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-6">
           {CourseData?.map((course, index) => (
-            <div key={index} className="shadow-lg">
+            <div key={index} className="h-[333px] shadow-lg">
               <Image
                 src={course?.img}
                 alt="Icon"
                 width={"0"}
                 height={"0"}
                 priority
-                className="w-full h-60 object-cover"
+                className="w-full h-[183px] object-cover"
               />
-              <div className="py-2 px-3">
-                <div className="flex justify-between items-center">
-                  <div>
-                    <Typography.Text
-                      className={`${
-                        index === 0
-                          ? "bg-secondary text-primary"
-                          : index === 1
-                          ? "bg-secondary-75 text-blue-500"
-                          : index === 2
-                          ? "bg-success text-success-100"
-                          : index === 3
-                          ? "bg-secondary-75 text-secondary-30"
-                          : index === 4
-                          ? "bg-error text-error"
-                          : index === 5
-                          ? "bg-warning text-warning"
-                          : index === 6
-                          ? "bg-secondary-75 text-secondary-30"
-                          : index === 7
-                          ? "bg-success text-success-100"
-                          : index === 8
-                          ? "bg-secondary text-primary"
-                          : "bg-warning text-warning"
-                      } text-xs uppercase px-2 py-0.5`}
-                    >
-                      {course?.title}
-                    </Typography.Text>
-                  </div>
-                  <div>
-                    <Typography.Text className="text-primary text-sm font-bold">
-                      ${course?.price}
-                    </Typography.Text>
-                  </div>
-                </div>
-                <Typography.Text
-                  style={{ margin: 0 }}
-                  className="text-sm mt-1 text-gray-900"
-                >
-                  {course?.des?.substring(0, 40) === course?.des
-                    ? course?.des?.substring(0, 40)
-                    : course?.des?.substring(0, 40) + "..."}
-                </Typography.Text>
-              </div>
-              <Divider className="bg-gray-200 -mt-1" />
-              <div className="py-1 pb-4 px-3 -mt-4">
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center gap-1">
-                    <AiFillStar className="text-primary text-lg" />
+              <div className="py-3 space-y-2">
+                <div className="px-3">
+                  <div className="flex justify-between items-center">
                     <div>
-                      <Typography.Text className={`text-sm`}>
-                        {`${course?.rating}.0`}
+                      <Typography.Text
+                        className={`${
+                          index === 0
+                            ? "bg-secondary text-primary"
+                            : index === 1
+                            ? "bg-secondary-75 text-blue-500"
+                            : index === 2
+                            ? "bg-success text-success-100"
+                            : index === 3
+                            ? "bg-secondary-75 text-secondary-30"
+                            : index === 4
+                            ? "bg-error text-error"
+                            : index === 5
+                            ? "bg-warning text-warning"
+                            : index === 6
+                            ? "bg-secondary-75 text-secondary-30"
+                            : index === 7
+                            ? "bg-success text-success-100"
+                            : index === 8
+                            ? "bg-secondary text-primary"
+                            : "bg-warning text-warning"
+                        } text-xs uppercase px-2 py-0.5`}
+                      >
+                        {course?.title}
+                      </Typography.Text>
+                    </div>
+                    <div>
+                      <Typography.Text className="text-primary text-sm font-bold">
+                        ${course?.price}
                       </Typography.Text>
                     </div>
                   </div>
-                  <div>
-                    <Typography.Text className="text-gray-700 text-sm">
-                      {course?.student}{" "}
-                      <span className="text-gray-500">students</span>
-                    </Typography.Text>
+                  <Typography.Text
+                    style={{ margin: 0 }}
+                    className="text-sm my-3 text-gray-900 block font-semibold"
+                  >
+                    {course?.des?.substring(0, 40) === course?.des
+                      ? course?.des?.substring(0, 40)
+                      : course?.des?.substring(0, 40) + "..."}
+                  </Typography.Text>
+                </div>
+                <Divider className="bg-gray-200 -mt-1" />
+                <div className="px-3">
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center gap-1">
+                      <AiFillStar className="text-primary text-lg" />
+                      <div>
+                        <Typography.Text className={`text-sm`}>
+                          {`${course?.rating}.0`}
+                        </Typography.Text>
+                      </div>
+                    </div>
+                    <div>
+                      <Typography.Text className="text-gray-700 text-sm">
+                        {course?.student}{" "}
+                        <span className="text-gray-500">students</span>
+                      </Typography.Text>
+                    </div>
                   </div>
                 </div>
               </div>
