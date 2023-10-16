@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
+import { Providers } from "./redux/Provider";
 const inter = Inter({ subsets: ["latin"] });
 const Layout = dynamic(() => import("@/components/Layouts/Layout"), {
   ssr: false,
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout>
-          <main className="min-h-screen">{children}</main>
-        </Layout>
+        <Providers>
+          <Layout>
+            <main className="min-h-screen">{children}</main>
+          </Layout>
+        </Providers>
       </body>
     </html>
   );
