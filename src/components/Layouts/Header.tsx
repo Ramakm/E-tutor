@@ -6,7 +6,7 @@ import { RiGraduationCapFill } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
 import { BsCart2 } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { Select, Button, Space ,Typography} from "antd";
+import { Select, Button, Space, Typography } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 const TopBar = dynamic(() => import("@/components/Layouts/Topbar"), {
@@ -40,15 +40,40 @@ const Header = () => {
     <>
       <TopBar />
       <div
-        className={`${activeNav} py-4 lg:px-14 md:px-6 sm:px-5 px-2 bg-neutral`}
+        className={`${activeNav} py-2 lg:px-14 md:px-6 sm:px-5 px-2 bg-neutral`}
       >
-        <div className="flex justify-between flex-wrap items-center">
+        <div className="flex justify-between flex-wrap gap-3 items-center">
           {/*--- Left Info ---*/}
           <div className="flex items-center gap-10">
             <Link href={"/"} className="flex items-center gap-3">
               <RiGraduationCapFill className="inline w-7 h-7 text-primary" />
               <Title level={3}>E-tutor</Title>
             </Link>
+            {/*--- Language Section ---*/}
+            <div className="lg:hidden block">
+              <Space>
+                <Select
+                  defaultValue="USD"
+                  style={{ width: 80 }}
+                  bordered={false}
+                  options={[
+                    { value: "USD", label: "USD" },
+                    { value: "bangla", label: "Bangla" },
+                    { value: "hindi", label: "Hindi" },
+                  ]}
+                />
+                <Select
+                  defaultValue="USD"
+                  style={{ width: 80, color: "#fff !important" }}
+                  bordered={false}
+                  options={[
+                    { value: "USD", label: "USD" },
+                    { value: "bangla", label: "Bangla" },
+                    { value: "hindi", label: "Hindi" },
+                  ]}
+                />
+              </Space>
+            </div>
             {/*--- Search field ---*/}
             <div className="lg:block hidden">
               <div className="flex items-center gap-3">
@@ -75,7 +100,7 @@ const Header = () => {
             </div>
           </div>
           {/*---- Right Info ---*/}
-          <div className="flex items-center lg:gap-6 md:gap-4 gap-2">
+          <div className="flex items-center lg:gap-6 md:gap-4 gap-8">
             <IoMdNotificationsOutline className="inline w-6 h-6 text-gray-500 cursor-pointer" />
             <MdFavoriteBorder className="inline w-5 h-5 text-gray-500 cursor-pointer" />
             <BsCart2 className="inline w-5 h-5 text-gray-500 cursor-pointer" />
