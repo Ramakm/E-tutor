@@ -119,7 +119,7 @@ const Footer = () => {
                       <Link
                         key={index}
                         href={""}
-                        className="block text-gray-500 hover:text-neutral duration-200 hover:text-neutral duration-200 ease-in-out text-sm my-2"
+                        className="block text-gray-500 hover:text-neutral duration-200 ease-in-out text-sm my-2"
                       >
                         {index === 0
                           ? "Development"
@@ -146,7 +146,7 @@ const Footer = () => {
                       <Link
                         key={index}
                         href={""}
-                        className={`block text-gray-500 hover:text-neutral duration-200 ease-in-out text-sm my-2 flex items-center gap-1 ${
+                        className={`text-gray-500 hover:text-neutral duration-200 ease-in-out text-sm my-2 flex items-center gap-1 ${
                           index === 1 && "w-36 border-b border-primary"
                         }`}
                       >

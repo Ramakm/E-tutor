@@ -98,11 +98,11 @@ const RecentCourse = () => {
               </div>
               {/*---- Hover to Course Details ----*/}
               <div
-                className={`lg:w-[424px] lg:h-[670px] absolute lg:-top-14 ${
+                className={`lg:w-[424px] lg:h-[600px] absolute lg:-top-14 ${
                   index === 3 && "right-20"
                 } z-50 lg:group-hover:block hidden duration-400 ease-in-out bg-neutral shadow-xl space-y-2`}
               >
-                <div className="p-5 space-y-4">
+                <div className="p-5 space-y-2">
                   {/*--- Title & Desc ----*/}
                   <div>
                     <Typography.Text
@@ -206,7 +206,7 @@ const RecentCourse = () => {
                   </div>
                 </div>
                 <Divider className="bg-gray-100" />
-                <div className="p-5 space-y-4">
+                <div className="p-5 space-y-2">
                   {/*---- Learn ----*/}
                   <div>
                     <Typography.Text
@@ -218,7 +218,7 @@ const RecentCourse = () => {
                     {[1, 2, 3]?.map((_, index) => (
                       <div
                         key={index}
-                        className="flex items-center gap-3 space-y-4"
+                        className="flex items-center gap-3 space-y-2"
                       >
                         <AiOutlineCheck className="text-lg text-success-100" />
                         <div>
@@ -256,7 +256,7 @@ const RecentCourse = () => {
           ))}
         </div>
         {/*--- Button ----*/}
-        <div className="mt-16 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <Button
             className={
               "flex items-center gap-3 bg-secondary text-primary border-none rounded-none"

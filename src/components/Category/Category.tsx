@@ -13,11 +13,13 @@ import icon_9 from "../../../public/assets/images/Frame_9.png";
 import icon_10 from "../../../public/assets/images/Frame_10.png";
 import icon_11 from "../../../public/assets/images/Frame_11.png";
 import icon_12 from "../../../public/assets/images/Frame_12.png";
+import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
 
 const Category = () => {
   return (
     <>
-      <div className="lg:px-28 md:px-12 sm:px-8 px-4 lg:py-10 py-7">
+      <div className="lg:px-28 md:px-12 sm:px-8 px-4">
         <Typography.Title level={2} className="font-semibold text-center mb-7">
           Browse top category
         </Typography.Title>
@@ -121,6 +123,19 @@ const Category = () => {
             </Col>
           ))}
         </Row>
+        <div className="flex justify-center items-center gap-2 mt-3">
+          <div>
+            <Typography.Title level={2} className="text-sm text-gray-500">
+              We have more category & subcategory.
+            </Typography.Title>
+          </div>
+          <Link
+            href={""}
+            className="text-primary flex items-center gap-2 text-sm"
+          >
+            Browser All <BsArrowRight />
+          </Link>
+        </div>
       </div>
     </>
   );
