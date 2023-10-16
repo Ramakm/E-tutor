@@ -20,7 +20,7 @@ const Footer = () => {
               <div>
                 <Typography.Title
                   level={2}
-                  className="text-neutral lg:text-3xl md:text-xl text-base"
+                  className="text-neutral lg:text-3xl md:text-2xl text-xl"
                 >
                   Start learning with 67.1k students around the world.
                 </Typography.Title>
@@ -44,7 +44,7 @@ const Footer = () => {
             </Col>
             {/*--- Online Course ---*/}
             <Col xs={11} sm={11} md={8} lg={4} xl={4}>
-              <div className="">
+              <div className="lg:ml-4 lg:my-0 my-4">
                 <Typography.Title level={2} className="text-neutral">
                   6.3k
                 </Typography.Title>
@@ -55,7 +55,7 @@ const Footer = () => {
             </Col>
             {/*--- Instructor ---*/}
             <Col xs={11} sm={11} md={8} lg={4} xl={4}>
-              <div className="">
+              <div className="lg:ml-4 lg:my-0 md:ml-4 my-4">
                 <Typography.Title level={2} className="text-neutral">
                   26k
                 </Typography.Title>
@@ -66,7 +66,7 @@ const Footer = () => {
             </Col>
             {/*--- Success ---*/}
             <Col xs={24} sm={24} md={8} lg={4} xl={4}>
-              <div className="">
+              <div className="lg:ml-4 lg:my-0 md:ml-4 my-4">
                 <Typography.Title level={2} className="text-neutral">
                   99.9%
                 </Typography.Title>
@@ -109,7 +109,7 @@ const Footer = () => {
             </Col>
             {/*--- Category ---*/}
             <Col className="gutter-row" xs={12} sm={12} md={8} lg={4} xl={4}>
-              <div>
+              <div className="lg:ml-4 md:ml-4 md:my-4 lg:my-0 my-4">
                 <Typography.Title level={5} className="text-neutral uppercase">
                   top 4 category
                 </Typography.Title>
@@ -136,7 +136,7 @@ const Footer = () => {
             </Col>
             {/*--- Quick Links ---*/}
             <Col className="gutter-row" xs={12} sm={12} md={8} lg={4} xl={4}>
-              <div>
+              <div className="lg:ml-4 md:ml-4 md:my-4 lg:my-0 my-4">
                 <Typography.Title level={5} className="text-neutral uppercase">
                   quick links
                 </Typography.Title>
@@ -166,7 +166,7 @@ const Footer = () => {
             </Col>
             {/*--- Support ---*/}
             <Col className="gutter-row" xs={12} sm={12} md={8} lg={4} xl={4}>
-              <div>
+              <div className="lg:ml-4 md:ml-4 md:my-4 lg:my-0 my-4">
                 <Typography.Title level={5} className="text-neutral uppercase">
                   support
                 </Typography.Title>
@@ -193,7 +193,7 @@ const Footer = () => {
             </Col>
             {/*--- App ---*/}
             <Col className="gutter-row" xs={12} sm={12} md={8} lg={6} xl={6}>
-              <div>
+              <div className="lg:ml-4 md:ml-4 md:my-4 lg:my-0 my-4">
                 <Typography.Title
                   level={5}
                   className="text-neutral uppercase pb-3"

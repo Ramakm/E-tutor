@@ -30,13 +30,12 @@ const TopBar = () => {
     <>
       <div className="bg-secondary-100 text-gray-500 py-3 lg:px-14 md:px-6 sm:px-5 px-2 ">
         <div className="flex justify-between items-center gap-3">
-          {/*--- Left Header Item ---*/}
+          {/*--- Mobile Menu ----*/}
           <div>
             <AiOutlineMenu
               onClick={() => setOpen(true)}
               className="text-xl lg:hidden block cursor-pointer"
             />
-            {/*--- Mobile Menu ----*/}
             <Drawer
               style={{ backgroundColor: "#1D2026" }}
               placement={"left"}
@@ -51,7 +50,10 @@ const TopBar = () => {
                     E-tutor
                   </Title>
                 </Link>
-                <AiOutlineClose onClick={()=>setOpen(false)} className="inline w-7 h-7 p-1 text-red-500 cursor-pointer border rounded-full"/>
+                <AiOutlineClose
+                  onClick={() => setOpen(false)}
+                  className="inline w-7 h-7 p-1 text-red-500 cursor-pointer border rounded-full"
+                />
               </div>
               <ul className="capitalize float-left">
                 {links.map((link) => (
