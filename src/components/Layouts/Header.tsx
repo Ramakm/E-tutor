@@ -1,14 +1,13 @@
 "use client";
-import React from "react";
+import { SearchOutlined } from "@ant-design/icons";
+import { Button, Input, Select, Space, Typography } from "antd";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { RiGraduationCapFill } from "react-icons/ri";
-import { MdFavoriteBorder } from "react-icons/md";
+import React from "react";
 import { BsCart2 } from "react-icons/bs";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { Select, Button, Space, Typography } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
-import { Input } from "antd";
+import { MdFavoriteBorder } from "react-icons/md";
+import { RiGraduationCapFill } from "react-icons/ri";
 const TopBar = dynamic(() => import("@/components/Layouts/Topbar"), {
   ssr: false,
 });
@@ -30,7 +29,7 @@ const Header = () => {
       let windowHeight = window.scrollY;
       windowHeight > 50
         ? setActiveNav(
-            "fixed top-0 left-0 w-full shadow-lg z-30 transform transition-transform duration-700 ease-in-out"
+            "fixed top-0 left-0 w-full shadow-lg z-50 transform transition-transform duration-700 ease-in-out"
           )
         : setActiveNav("");
     }
@@ -63,11 +62,11 @@ const Header = () => {
                   ]}
                 />
                 <Select
-                  defaultValue="USD"
+                  defaultValue="EN"
                   style={{ width: 80, color: "#fff !important" }}
                   bordered={false}
                   options={[
-                    { value: "USD", label: "USD" },
+                    { value: "EN", label: "English" },
                     { value: "bangla", label: "Bangla" },
                     { value: "hindi", label: "Hindi" },
                   ]}
@@ -99,6 +98,7 @@ const Header = () => {
               </div>
             </div>
           </div>
+
           {/*---- Right Info ---*/}
           <div className="flex items-center lg:gap-6 md:gap-4 gap-8">
             <IoMdNotificationsOutline className="inline w-6 h-6 text-gray-500 cursor-pointer" />

@@ -1,8 +1,7 @@
 "use client";
-import { Row, Col, Typography, Button } from "antd";
-import { BsArrowRight } from "react-icons/bs";
-import becomeImg from "../../../public/assets/images/become_instructor.png";
+import { Button, Col, Row, Typography } from "antd";
 import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
 
 const Instructor = () => {
   return (
@@ -35,15 +34,17 @@ const Instructor = () => {
                   </Button>
                 </div>
                 <Image
-                  src={becomeImg}
+                  src={"/assets/images/become_instructor.png"}
                   alt="Become Instructor Image"
-                  width={"0"}
-                  height={"0"}
+                  width={500}
+                  height={500}
                   priority
+                  quality={100}
                   className="lg:block md:block hidden w-36 h-auto object-cover absolute bottom-0 right-5"
                 />
               </div>
             </Col>
+
             {/*--- Earning Step ----  */}
             <Col xs={24} sm={24} md={24} lg={12} xl={12}>
               <div className="bg-neutral px-6 py-7 lg:mx-6 lg:my-0 my-6">

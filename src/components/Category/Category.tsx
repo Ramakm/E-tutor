@@ -1,7 +1,12 @@
 "use client";
+import { Col, Row, Typography } from "antd";
 import Image from "next/image";
-import { Typography, Row, Col } from "antd";
+import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 import icon_1 from "../../../public/assets/images/Frame_1.png";
+import icon_10 from "../../../public/assets/images/Frame_10.png";
+import icon_11 from "../../../public/assets/images/Frame_11.png";
+import icon_12 from "../../../public/assets/images/Frame_12.png";
 import icon_2 from "../../../public/assets/images/Frame_2.png";
 import icon_3 from "../../../public/assets/images/Frame_3.png";
 import icon_4 from "../../../public/assets/images/Frame_4.png";
@@ -10,11 +15,6 @@ import icon_6 from "../../../public/assets/images/Frame_6.png";
 import icon_7 from "../../../public/assets/images/Frame_7.png";
 import icon_8 from "../../../public/assets/images/Frame_8.png";
 import icon_9 from "../../../public/assets/images/Frame_9.png";
-import icon_10 from "../../../public/assets/images/Frame_10.png";
-import icon_11 from "../../../public/assets/images/Frame_11.png";
-import icon_12 from "../../../public/assets/images/Frame_12.png";
-import { BsArrowRight } from "react-icons/bs";
-import Link from "next/link";
 
 const Category = () => {
   return (
@@ -23,6 +23,7 @@ const Category = () => {
         <Typography.Title level={2} className="font-semibold text-center mb-7">
           Browse top category
         </Typography.Title>
+
         {/*--- Card Info ----*/}
         <Row className="items-center">
           {[...Array(12)]?.map((_, index) => (
@@ -38,7 +39,7 @@ const Category = () => {
                     : index === 3
                     ? "bg-error"
                     : index === 4
-                    ? "bg-Gray"
+                    ? "bg-Gray-50"
                     : index === 5
                     ? "bg-Gray-50"
                     : index === 6
@@ -124,6 +125,7 @@ const Category = () => {
             </Col>
           ))}
         </Row>
+
         {/*--- Button ----*/}
         <div className="flex justify-center flex-wrap items-center gap-2 mt-3">
           <div>

@@ -1,18 +1,17 @@
-import React from "react";
-import Link from "next/link";
-import { AiOutlineMenu } from "react-icons/ai";
-import { Select, Drawer, Space, Typography, Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
+import { Drawer, Input, Select, Space, Typography } from "antd";
+import Link from "next/link";
+import React from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { RiGraduationCapFill } from "react-icons/ri";
-import { AiOutlineClose } from "react-icons/ai";
 const { Title } = Typography;
 
 const links = [
   { name: "home", link: "/" },
-  { name: "about", link: "/about" },
-  { name: "courses", link: "/courses" },
-  { name: "Contact", link: "/contact" },
-  { name: "become a instructor", link: "/instructor" },
+  { name: "about", link: "/" },
+  { name: "courses", link: "/" },
+  { name: "Contact", link: "/" },
+  { name: "become a instructor", link: "/" },
 ];
 
 const activeColor = "text-neutral";
@@ -88,6 +87,7 @@ const TopBar = () => {
               </ul>
             </div>
           </div>
+
           {/*--- Middle Search bar ---*/}
           <div className="lg:hidden block">
             <div className="flex items-center gap-3">
@@ -113,6 +113,7 @@ const TopBar = () => {
               />
             </div>
           </div>
+
           {/*---- Right Info ----*/}
           <div className="lg:block hidden">
             <Space>
@@ -120,22 +121,24 @@ const TopBar = () => {
                 defaultValue="USD"
                 style={{
                   backgroundColor: "#a7a6a6",
+                  width: 100,
                 }}
                 bordered={false}
                 options={[
                   { value: "USD", label: "USD" },
-                  { value: "bangla", label: "Bangla" },
-                  { value: "hindi", label: "Hindi" },
+                  { value: "taka", label: "Taka" },
+                  { value: "dollar", label: "Dollar" },
                 ]}
               />
               <Select
-                defaultValue="USD"
+                defaultValue="EN"
                 style={{
                   backgroundColor: "#a7a6a6",
+                  width: 100,
                 }}
                 bordered={false}
                 options={[
-                  { value: "USD", label: "USD" },
+                  { value: "EN", label: "English" },
                   { value: "bangla", label: "Bangla" },
                   { value: "hindi", label: "Hindi" },
                 ]}

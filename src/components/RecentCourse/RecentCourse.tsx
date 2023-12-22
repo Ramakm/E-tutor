@@ -1,14 +1,14 @@
 "use client";
 import { CourseData } from "@/dummy/CourseData";
-import { Typography, Divider, Button } from "antd";
+import { Button, Divider, Typography } from "antd";
 import Image from "next/image";
-import { AiFillStar, AiOutlineUser, AiOutlineCheck } from "react-icons/ai";
+import Link from "next/link";
+import { AiFillStar, AiOutlineCheck, AiOutlineUser } from "react-icons/ai";
 import { BiTime } from "react-icons/bi";
-import { FiBarChart } from "react-icons/fi";
 import { BsArrowRight, BsCart2 } from "react-icons/bs";
+import { FiBarChart } from "react-icons/fi";
 import { MdFavoriteBorder } from "react-icons/md";
 import UserImg from "../../../public/assets/images/Photo.png";
-import Link from "next/link";
 
 const RecentCourse = () => {
   return (
@@ -99,11 +99,12 @@ const RecentCourse = () => {
                   </div>
                 </div>
               </Link>
+
               {/*---- Hover to Course Details ----*/}
               <div
                 className={`lg:w-[424px] lg:h-[600px] absolute lg:-top-14 ${
                   index === 3 && "right-20"
-                } z-50 lg:group-hover:block hidden duration-400 ease-in-out bg-neutral shadow-xl space-y-2`}
+                } z-10 lg:group-hover:block hidden duration-400 ease-in-out bg-neutral shadow-xl space-y-2`}
               >
                 <div className="p-5 space-y-2">
                   {/*--- Title & Desc ----*/}
